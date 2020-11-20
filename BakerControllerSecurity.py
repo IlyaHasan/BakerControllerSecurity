@@ -6,7 +6,6 @@ import pybase64
 import sql
 import sqlite3
 import ctypes
-import time 
 
 os.system("cls")
 print("Loading...")
@@ -85,21 +84,12 @@ os.system("cls")
 print(bcolors.CGREEN2 + "[OK]: Connection internet!" + bcolors.CGREEN2)
 time.sleep(1.00)
 print(bcolors.CGREEN2 + "[OK]: Connection MySQL DataBase for program!\n" + bcolors.CGREEN2)
-print(bcolors.CGREY + """
-=====================================
-             CREATE FILES
-=====================================
-""" + bcolors.CGREY)
 print(bcolors.CGREY + f"[Message]: Run Program of directory: {rundirectory}" + bcolors.CGREY)
 time.sleep(1.00)
 
-print(bcolors.CGREY + f"[Message]: Create folder .tmp" + bcolors.CGREY)
-time.sleep(1.00)
-
-os.mkdir(".tmp")
 os.chdir(".tmp")
 
-print(bcolors.CGREY + f"[Message]: Create file: runhash.tmp" + bcolors.CGREY)
+print(bcolors.CGREY + f"[Message]: Create file: run hash file" + bcolors.CGREY)
 time.sleep(1.00)
 
 f=open(f"{zonetime}{cryptotextrundirectory}.tmp", 'a')
@@ -107,43 +97,6 @@ f.write(f"""
 {rundirectory}
 """)
 f.close()
-
-print(bcolors.CGREY + f"[Message]: Create folder: data" + bcolors.CGREY)
-time.sleep(1.00)
-
-os.mkdir("../data")
-
-print(bcolors.CGREY + f"[Message]: Create folder sub: data/users_data" + bcolors.CGREY)
-time.sleep(1.00)
-
-os.chdir("../data")
-os.mkdir("../data/users_data")
-
-print(bcolors.CGREY + f"[Message]: Create folder sub: data/users_data/table_users_data" + bcolors.CGREY)
-time.sleep(1.00)
-
-os.chdir("../data/users_data")
-os.mkdir("../users_data/table_users_data")
-
-print(bcolors.CGREY + f"[Message]: Create folder  Documentation(docs)" + bcolors.CGREY)
-time.sleep(1.00)
-
-os.chdir("../../")
-os.mkdir("docs")
-
-print(bcolors.CGREY + f"[Message]: Make Documentation" + bcolors.CGREY)
-time.sleep(.9)
-
-os.chdir("docs")
-
-print(bcolors.CGREY + f"[Message]: Everything was done successfully!, We wish you successful work with the program!\n" + bcolors.CGREY)
-time.sleep(1.00)
-
-os.system("pause")
-
-os.system("color 7")
-os.system("cls")
-
 
 print("""
 [1] - Login
